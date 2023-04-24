@@ -902,6 +902,21 @@ namespace Godot
         }
 
         /// <summary>
+        /// Constructs a color from an OK HSV profile. The <paramref name="hue"/>,
+        /// <paramref name="saturation"/>, and <paramref name="value"/> are typically
+        /// between 0.0 and 1.0.
+        /// </summary>
+        /// <param name="hue">The OK HSV hue, typically on the range of 0 to 1.</param>
+        /// <param name="saturation">The OK HSV saturation, typically on the range of 0 to 1.</param>
+        /// <param name="value">The OK HSV value, typically on the range of 0 to 1.</param>
+        /// <param name="alpha">The alpha (transparency) value, typically on the range of 0 to 1.</param>
+        /// <returns>The constructed color.</returns>
+        public static Color FromOkHsv(float hue, float saturation, float value, float alpha = 1.0f)
+        {
+            return NativeFuncs.godotsharp_color_from_ok_hsv(hue, saturation, value, alpha);
+        }
+
+        /// <summary>
         /// Constructs a color from an OK HSL profile. The <paramref name="hue"/>,
         /// <paramref name="saturation"/>, and <paramref name="lightness"/> are typically
         /// between 0.0 and 1.0.
