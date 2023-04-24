@@ -159,6 +159,24 @@
 				[/codeblocks]
 			</description>
 		</method>
+		<method name="from_ok_hsv" qualifiers="static">
+			<return type="Color" />
+			<param index="0" name="h" type="float" />
+			<param index="1" name="s" type="float" />
+			<param index="2" name="v" type="float" />
+			<param index="3" name="alpha" type="float" default="1.0" />
+			<description>
+				Constructs a color from an [url=https://bottosson.github.io/posts/colorpicker/]OK HSV profile[/url]. The hue ([param h]), saturation ([param s]), and value ([param v]) are typically between 0.0 and 1.0.
+				[codeblocks]
+				[gdscript]
+				var color = Color.from_ok_hsv(0.58, 0.5, 0.79, 0.8)
+				[/gdscript]
+				[csharp]
+				var color = Color.FromOkHsv(0.58f, 0.5f, 0.79f, 0.8f);
+				[/csharp]
+				[/codeblocks]
+			</description>
+		</method>
 		<method name="from_ok_hsl" qualifiers="static">
 			<return type="Color" />
 			<param index="0" name="h" type="float" />
